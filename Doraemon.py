@@ -1,8 +1,9 @@
-# !/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @Author: dong dong
-# @Env: python 3.6
-# @Github: https://github.com/PerpetualSmile
+# !/usr/bin/env python3 
+# -*- coding: utf-8 -*- 
+# @Author: dong 
+# @Date: 2018-07-05 19:37:42 
+# @Env: python 3.6 
+# @Github: https://github.com/PerpetualSmile 
 
 from turtle import *
 
@@ -15,6 +16,9 @@ def my_goto(x, y):
 
 # 眼睛
 def eyes():
+    fillcolor("#ffffff")
+    begin_fill()
+
     tracer(False)
     a = 2.5
     for i in range(120):
@@ -27,18 +31,20 @@ def eyes():
             lt(3)
             fd(a)
     tracer(True)
+    end_fill()
+
 
 # 胡须
 def beard():
-    my_goto(-37, 135)
+    my_goto(-32, 135)
     seth(165)
     fd(60)
 
-    my_goto(-37, 125)
+    my_goto(-32, 125)
     seth(180)
     fd(60)
 
-    my_goto(-37, 115)
+    my_goto(-32, 115)
     seth(193)
     fd(60)
 
@@ -82,6 +88,7 @@ def scarf():
 # 鼻子
 def nose():
     my_goto(-10, 158)
+    seth(315)
     fillcolor('#e70010')
     begin_fill()
     circle(20)
@@ -114,12 +121,20 @@ def black_eyes():
 
 # 脸
 def face():
+
     fd(183)
+    lt(45)
     fillcolor('#ffffff')
     begin_fill()
-    lt(45)
     circle(120, 100)
-
+    seth(180)
+    # print(pos())
+    fd(121)
+    pendown()
+    seth(215)
+    circle(120, 100)
+    end_fill()
+    my_goto(63.56,218.24)
     seth(90)
     eyes()
     seth(180)
@@ -131,10 +146,6 @@ def face():
     penup()
     seth(180)
     fd(64)
-    pendown()
-    seth(215)
-    circle(120, 100)
-    end_fill()
 
 # 头型
 def head():
@@ -317,4 +328,3 @@ if __name__ == '__main__':
     my_goto(100, -300)
     write('by dongdong', font=("Bradley Hand ITC", 30, "bold"))
     mainloop()
-
