@@ -554,7 +554,7 @@ class Pikachu:
 def main():
     print('Painting the Pikachu... ')
     turtle.screensize(800, 600)
-    turtle.title('Pikachu')
+    
     pikachu = Pikachu()
     pikachu.start()
     turtle.mainloop()
